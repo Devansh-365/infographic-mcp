@@ -1,7 +1,7 @@
 """
 Configuration Module
 ====================
-This file stores all the settings for our MCP server in one place.
+This file stores all the settings for our Infographic MCP server in one place.
 
 Why use a separate config file?
     - Keeps settings organized and easy to find
@@ -18,11 +18,30 @@ import os
 
 SERPER_API_KEY: str = os.environ.get("SERPER_API_KEY", "")
 
-SERPER_API_URL: str = "https://google.serper.dev/search"
+SERPER_SEARCH_URL: str = "https://google.serper.dev/search"
+
+SERPER_IMAGES_URL: str = "https://google.serper.dev/images"
 
 DEFAULT_NUM_RESULTS: int = 10
 
-SERVER_NAME: str = "design-inspiration-mcp"
+DEFAULT_IMAGE_SIZE: str = "l"
+
+DEFAULT_ASPECT_RATIO: str = "t"
+
+INFOGRAPHIC_SOURCES: dict[str, str] = {
+    "visual capitalist": "visualcapitalist.com",
+    "behance": "behance.net",
+    "dribbble": "dribbble.com",
+    "information is beautiful": "informationisbeautiful.net",
+    "cool infographics": "coolinfographics.com",
+    "venngage": "venngage.com",
+    "canva": "canva.com",
+    "statista": "statista.com",
+    "pinterest": "pinterest.com",
+    "visme": "visme.co",
+}
+
+SERVER_NAME: str = "infographic-mcp"
 
 SERVER_HOST: str = "0.0.0.0"
 
